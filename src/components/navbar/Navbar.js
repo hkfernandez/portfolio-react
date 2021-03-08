@@ -1,29 +1,36 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+	BrowserRouter as Router, Switch, Route, Link,
+	// useLocation 
+} from "react-router-dom";
 import About from '../about/About';
 import Portfolio from '../portfolio/Portfolio';
 import Contact from '../contact/Contact';
 import './navbar.css';
 
-function clickTest() {
-	console.log('click');
-}
 
 function Navbar() {
+
+	// const location = useLocation();
+
 	return (
 		<Router>
 			<div>
 				<nav className='navbar'>
-					<h3>Hector Fernandez</h3>
+					<h3 className='hector'>Hector Fernandez</h3>
 					<ul className='list'>
 						<li>
-							<Link to="/" onClick={clickTest}>About</Link>
+							<Link to="/"
+							// className={location.pathname === "/" ? "nav-link active" : "nav-link"}
+							>
+								{`[ About ]`}
+							</Link>
 						</li>
 						<li>
-							<Link to="/portfolio" onClick={clickTest}>Portfolio</Link>
+							<Link to="/portfolio">{`[ Portfolio ]`}	</Link>
 						</li>
 						<li>
-							<Link to="/contact">Contact</Link>
+							<Link to="/contact">{`[ Contact ]`}</Link>
 						</li>
 					</ul>
 				</nav>
