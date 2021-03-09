@@ -1,7 +1,7 @@
 import React from 'react'
 import {
 	BrowserRouter as Router, Switch, Route, Link,
-	// useLocation 
+	useLocation
 } from "react-router-dom";
 import About from '../about/About';
 import Portfolio from '../portfolio/Portfolio';
