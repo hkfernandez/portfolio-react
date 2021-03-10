@@ -72,7 +72,7 @@ const projectsArr = [
 		atlText: "Team Directory Web Application",
 		depolyedLink: "https://github.com/hkfernandez/employee-directory",
 		githubLink: "https://hkfernandez.github.io/employee-directory/",
-		text: "This app allows access to a list of team members and their contact information. The list can be dynamically filtered when searching and sorted by team member name.",
+		text: "This app creates a list team members that can be dynamically filtered when searching and sorted by team member name.",
 		tech: [
 			"React",
 			"Express Server",

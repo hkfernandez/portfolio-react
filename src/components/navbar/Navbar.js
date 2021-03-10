@@ -36,6 +36,9 @@ function Navbar() {
 				</nav>
 
 				<Switch>
+					<Route exact path="">
+						<About />
+					</Route>
 					<Route exact path="/">
 						<About />
 					</Route>
