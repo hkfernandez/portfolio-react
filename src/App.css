@@ -9,11 +9,17 @@ body {
 	background-color: white;
 }
 
+button {
+	margin: .5em;
+	border: 2px solid blue;
+}
+
 a {
 	text-decoration: none;
 	font-weight: 500;
 	color: black;
 	font-size: 1.25em;
+	margin: .5em;
 	transition: font-weight .3s ease-out;
 } 
 
@@ -22,6 +28,16 @@ a:hover {
 	color: black;
 	font-weight: 700;
 } 
+
+@media screen and (max-width: 525px) {
+
+	a {
+		font-size: 1em;
+	}
+	p {
+		font-size: .75em;
+	}
+}
 
 @keyframes App-logo-spin {
   from {
