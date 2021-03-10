@@ -1,7 +1,7 @@
 import stockAppImg from './images/stocks.png'
 import weatherAppImg from './images/weatherDashboardImg.png'
 import recipeAppImg from './images/recipeAppImg.png'
-import scheduleAppImg from './images/appImage.png'
+import budgetAppImg from './images/budget.png'
 import burgerAppImg from './images/burger.png'
 import teamAppImg from './images/team.png'
 import portfolioAppImg from './images/portfolio.png'
@@ -76,6 +76,21 @@ const projectsArr = [
 		tech: [
 			"React",
 			"Express Server",
+		]
+	},
+	{
+		imageSource: budgetAppImg,
+		atlText: "Travel Budget Web Application",
+		depolyedLink: "https://salty-harbor-32072.herokuapp.com/",
+		githubLink: "https://github.com/hkfernandez/travel-budget",
+		text: "A progressive web app that allows you to record expenses, even without an internet connection",
+		tech: [
+			"Javascript",
+			"Service Worker",
+			"Cache Storage",
+			"IndexedDB",
+			"Mongodb",
+			"Mongoose"
 		]
 	},
 ]
