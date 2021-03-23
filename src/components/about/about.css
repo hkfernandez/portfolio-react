@@ -4,18 +4,34 @@
 	box-sizing: border-box;
 }
 
+.whiteText {
+	color: white;
+}
+
+.welcomeText{
+	color: black;
+}
+
+.soGladText{
+	color: black;
+}
+
 .aboutMeWrapper {
 	padding: 2em;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-
 .aboutMeWrapper div {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	padding-right: 3em;
+}
+
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .myImg {
@@ -24,9 +40,13 @@
 	border: .5px solid lightgrey;
 	padding: .25em;
 	margin-top: 1em;
+	background-color: white;
+	z-index: 1;
+	position: absolute;
 }
 
 .aboutMe {
+	z-index: 0;
 	width: 250px;
 	display: flex;
 	flex-direction: column;
@@ -36,22 +56,52 @@
 	padding: 1em 0;
 }
 
-header {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
 .bold {
 	font-weight: 600;
 }
 
-	@media screen and (max-width: 725px) {
-		.aboutMeWrapper {
-			padding-right: 0;
-			align-items: flex-start;
-		}
+.transitionWrapper {
+	position: relative;
+}
+
+.myImageWrapper {
+	position: relative;
+}
+
+.myImageCover {
+	position: absolute;
+	z-index: 2;
+	width: 250px;
+	height: 240px;
+	font-size: 200px;
+	font-family: 'Anonymous Pro', monospace;
+	text-align: center;
+	margin-top: 15px;
+	padding-left: 30px;
+	padding-top: 20px;
+	border-radius: .5rem;
+	background-color:black;
+	color: white;
+}
+.hideMyImageCover {
+	background-color: transparent;
+	color: transparent;
+}
+
+.bioWrapper {
+	position: absolute;
+	top: 250px;
+}
+
+
+/* MEDIA QUERIES ==========================*/
+
+@media screen and (max-width: 725px) {
+	.aboutMeWrapper {
+		padding-right: 0;
+		align-items: flex-start;
 	}
+}
 
 @media screen and (max-width: 300px) {
 
@@ -79,3 +129,111 @@ header {
 		width: 200px;
 	}
 }
+
+/* ANIMATIONS ==========================*/
+
+.welcomeTextAnimated{
+	animation: welcomeText;
+	animation-duration: 3s;
+	animation-delay: 2s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes welcomeText {
+	0% {color: white;}
+	100% {color: black;}
+}
+
+.soGladTextAnimated{
+	animation: soGladText;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes soGladText {
+	0% {color: white;}
+	100% {color: black;}
+}
+
+.myImageCoverAnimated {
+	animation: myImageCover;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes myImageCover {
+	0% {
+		background-color:black;
+		color: white;
+	}
+	100% {
+		background-color: transparent;
+		color: transparent;
+	}
+}
+
+
+.useTheText {
+	color: white;
+	transition: color 3s ease-in-out 11s;
+}
+.blackText {
+	color: black;
+}
+
+
+
+/*.hiDiv {
+
+	transition: background-color 4s ease-in-out 3s, color 5s ease-out 3s;
+}
+.showImage {
+	background-color: transparent;
+	color: transparent;
+}*/
+
+.bioCover {
+	position: absolute;
+	top: 250px;
+	z-index: 2;
+	height: 300px;
+	width: 250px;
+	background-color: white;
+	/* border: 2px solid red; */
+	transition: top 5s linear 5s, height 4s 8s;
+}
+.uncovered {
+	top: 500px;
+	height: 0px;
+}
+
+.scrollText {
+	top: 250px;
+}
+
+.resumeBtn {
+	z-index: 0;
+	transition: z-index 0s 12s;
+	animation: resumeBtn 8s 12s infinite;
+}
+.top {
+	z-index: 5;
+}
+.resumeBtn:hover {
+	animation: resumeBtn 8s ;
+}
+@keyframes resumeBtn {
+	0% {color: black;}
+	50% {
+		color:green;
+	}
+	100% {
+		color: black;
+		font-weight: 400;
+	}
+}
+
+
+

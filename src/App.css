@@ -1,13 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
+	/* padding-bottom: 120px; */
 	box-sizing: border-box;
-	font-family: 'Courier New', Courier, monospace;
+	/* font-family: 'Anonymous Pro', monospace, 'Courier New', Courier, monospace; */
+	font-family: 'Anonymous Pro', monospace;
 }
 
-body {
-	background-color: white;
-}
+/* html {
+	min-height: 100vh;
+} */
 
 button {
 	margin: .5em;
@@ -39,11 +41,6 @@ a:hover {
 	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .App {
+	min-height: 100vh;
+} */
