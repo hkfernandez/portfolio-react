@@ -45,14 +45,14 @@ header {
 	position: absolute;
 }
 
-.aboutMe {
+.aboutMeWrapper {
 	z-index: 0;
 	width: 250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.aboutMe p {
+.aboutMeWrapper p {
 	padding: 1em 0;
 }
 
@@ -88,11 +88,27 @@ header {
 	color: transparent;
 }
 
-.bioWrapper {
+.aboutMeCover {
+	position: absolute;
+	top: 250px;
+	z-index: 2;
+	height: 300px;
+	width: 250px;
+	background-color: white;
+}
+.hideAboutMeCover {
+	background-color: transparent;
+	height: 0px;
+}
+
+.aboutMe {
 	position: absolute;
 	top: 250px;
 }
 
+.useTheText {
+	color: black;
+}
 
 /* MEDIA QUERIES ==========================*/
 
@@ -121,11 +137,11 @@ header {
 	.myImg {
 		width: 200px
 	}
-	.aboutMe {
+	.aboutMeWrapper {
 		width: 200px;
 		align-items: flex-start;
 	}
-	.aboutMe p {
+	.aboutMeWrapper p {
 		width: 200px;
 	}
 }
@@ -174,55 +190,46 @@ header {
 	}
 }
 
+.aboutMeCoverAnimated {
+	animation: aboutMeCover;
+	animation-duration: 3s;
+	animation-delay: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes aboutMeCover {
+	0% {
+		top: 250px;
+		height: 300px;
+	}
+	100% {
+		top: 500px;
+		height: 0px;
+	}
+}
 
-.useTheText {
+.useTheTextAnimated {
+	animation: useTheText;
+	animation-duration: 3s;
+	animation-delay: 12s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes useTheText {
+	0% {
 	color: white;
-	transition: color 3s ease-in-out 11s;
-}
-.blackText {
+	}
+	100% {
 	color: black;
+	}
 }
 
-
-
-/*.hiDiv {
-
-	transition: background-color 4s ease-in-out 3s, color 5s ease-out 3s;
-}
-.showImage {
-	background-color: transparent;
-	color: transparent;
-}*/
-
-.bioCover {
-	position: absolute;
-	top: 250px;
-	z-index: 2;
-	height: 300px;
-	width: 250px;
-	background-color: white;
-	/* border: 2px solid red; */
-	transition: top 5s linear 5s, height 4s 8s;
-}
-.uncovered {
-	top: 500px;
-	height: 0px;
-}
-
-.scrollText {
-	top: 250px;
-}
-
-.resumeBtn {
-	z-index: 0;
-	transition: z-index 0s 12s;
-	animation: resumeBtn 8s 12s infinite;
-}
-.top {
-	z-index: 5;
-}
-.resumeBtn:hover {
-	animation: resumeBtn 8s ;
+.resumeBtnAnimated{
+	transition: color 3s;
+	animation: resumeBtn;
+	animation-duration: 6s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 @keyframes resumeBtn {
 	0% {color: black;}
@@ -231,8 +238,11 @@ header {
 	}
 	100% {
 		color: black;
-		font-weight: 400;
 	}
+}
+.resumeBtnAnimated:hover {
+	font-weight: 700;
+	color: green;
 }
 
 
