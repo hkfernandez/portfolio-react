@@ -5,7 +5,7 @@ Portfolio
 A portfolio of my work built in React.
 You can find it deployed [here](https://hkfernandez.github.io/portfolio-react/).
 
-![alt text](assets/images/screenshot.png)
+![Portfolio](./public/assets/images/screenshot.png)
 
 ## License
 MIT
