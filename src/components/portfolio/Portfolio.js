@@ -16,16 +16,22 @@ function Portfolio() {
 						return (
 							<section key={index} className='project'>
 								<img src={project.imageSource} alt={project.atlText} />
-								<p>{project.text}</p>
-								<a href={project.depolyedLink}>{`[ Website ]`}</a>
-								<a href={project.githubLink}>{`[ GitHub Repo ]`}</a>
-								<p>Key Tech: {project.tech}</p>
-							</section>
+								<div className="projectInfoWrapper">
+									<p className='projectDescription'>{project.text}</p>
+									<div className="linksAndTechWrapper">
+										<p className='keyTech'>{project.tech}</p>
+										<div className="linksWrapper">
+											<a href={project.depolyedLink} target='blank'>{`[ Website ]`}</a>
+											<a href={project.githubLink} target='blank'>{`[ GitHub Repo ]`}</a>
+										</div>
+									</div>
+								</div>
+							</section >
 						)
 					}
 				)
 			}
-		</main>
+		</main >
 	);
 }
 export default Portfolio;

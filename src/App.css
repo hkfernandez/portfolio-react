@@ -7,9 +7,10 @@
 	font-family: 'Anonymous Pro', monospace;
 }
 
-/* html {
-	min-height: 100vh;
-} */
+html {
+	position: relative;
+	min-height: 100%;
+}
 
 button {
 	margin: .5em;
@@ -41,6 +42,7 @@ a:hover {
 	}
 }
 
-/* .App {
-	min-height: 100vh;
-} */
+.App {
+	/*position: relative;
+	min-height: 100vh;*/
+}

@@ -42,30 +42,33 @@ function About() {
 	)
 
 	return (
-		<main className='aboutMeWrapper'>
+		<main className='aboutComponentWrapper'>
 			<div>
-				<header>
+				<header className='aboutHeader'>
 					<h1 className={`whiteText ${welcomeTextClassName}`}>Welcome,</h1>
 					<h3 className={`whiteText ${soGladTextClassName}`}> so glad you were able to stop by.</h3>
 				</header>
-				<div className="transitionWrapper">
+				<div className="aboutBody">
 					<figure className='myImageWrapper'>
-						<div className={`myImageCover ${myImageCoverClassName}`}>Hi</div>
-						<img className="myImg" src={myPhoto} alt="Hector Was Here" />
+						<div className="myImageRealativeWrapper">
+							<img className="myImg" src={myPhoto} alt="Hector Was Here" />
+							<div className={`myImageCover ${myImageCoverClassName}`}>Hi</div>
+						</div>
 					</figure>
 					<section className='aboutMeWrapper'>
-						<div className={`aboutMeCover ${aboutMeCoverClassName}`}></div>
-						<div className="aboutMe">
-							<p>My name is  <span className='bold'>Hector</span>, and I love making useful, beautiful things. I work as a web developer in the MERN stack and also know lots about tradeshows, residential remodeling and theatrical set design from my past lives.</p>
-							<a
-								className={`whiteText ${resumeBtnClassName}`}
-								href='https://drive.google.com/file/d/1khv5D-Mb2aM4oVDFQrrgkjT4x_4oNUKg/view?usp=sharing'
-								target='blank'
-							>
-								{`[ Resume ]`}
-							</a>
-							<p className={`whiteText ${useTheTextClassName}`}>Use the <span className='bold'>links at the top of the page</span> to see some of my work or drop me a line. </p>
-
+						<div className="aboutMeRelativeWrapper">
+							<div className={`aboutMeCover ${aboutMeCoverClassName}`}></div>
+							<div className="aboutMe">
+								<p>My name is  <span className='bold'>Hector</span>, and I love making useful, beautiful things. I work as a web developer in the MERN stack and also know lots about tradeshows, residential remodeling and theatrical set design from my past lives.</p>
+								<a
+									className={`whiteText ${resumeBtnClassName}`}
+									href='https://drive.google.com/file/d/1khv5D-Mb2aM4oVDFQrrgkjT4x_4oNUKg/view?usp=sharing'
+									target='blank'
+								>
+									{`[ Resume ]`}
+								</a>
+								<p className={`whiteText ${useTheTextClassName}`}>Use the <span className='bold'>links at the top of the page</span> to see some of my work or drop me a line. </p>
+							</div>
 						</div>
 					</section>
 				</div>

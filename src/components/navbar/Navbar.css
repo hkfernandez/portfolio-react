@@ -12,6 +12,11 @@
 	height: 90px;
 	padding: 2em 2em;
 	border-bottom: .5px solid black;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+
 }
 
 .list {

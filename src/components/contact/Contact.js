@@ -3,17 +3,12 @@ import './contact.css'
 
 function Contact() {
 
-	function copy(event) {
-		let copyText = event.target.dataset.text;
-		console.log(copyText);
-		// copyText.select();
-		// document.execCommand("copy");
-	}
-
 	return (
 		<main className='contactWrapper'>
-			<h1>Please,</h1>
-			<h3>do be in touch.</h3>
+			<div className="pleaseTextWrapper">
+				<h1>Please,</h1>
+				<h3>do be in touch.</h3>
+			</div>
 			<h4>hkfernandezdev@gmail.com</h4>
 			{/* <button data-text='hkfernandezdev@gmail.com' onClick={copy}>{`[ copy ]`}</button> */}
 			<a href="https://www.linkedin.com/in/hector-k-fernandez/" target="blank">{`[ LinkedIn ]`}</a>

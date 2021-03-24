@@ -6,6 +6,27 @@
 
 .whiteText {
 	color: white;
+	z-index: 0;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.aboutComponentWrapper {
+	z-index: 0;
+	padding: 2em;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*width: 100%;*/
+	margin-bottom: 120px;
+	margin-top: 90px;
+}
+
+.aboutHeader{
+	margin-top: 1em;
 }
 
 .welcomeText{
@@ -16,22 +37,11 @@
 	color: black;
 }
 
-.aboutMeWrapper {
-	padding: 2em;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.aboutMeWrapper p {
+	padding: 1em 0;
 }
-.aboutMeWrapper div {
-	display: flex;
-	flex-direction: column;
-}
-
-header {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
+.aboutMe {
+	width: 250px;
 }
 
 .myImg {
@@ -45,27 +55,23 @@ header {
 	position: absolute;
 }
 
-.aboutMeWrapper {
-	z-index: 0;
-	width: 250px;
+.aboutBody {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.aboutMeWrapper p {
-	padding: 1em 0;
-}
-
-.bold {
-	font-weight: 600;
-}
-
-.transitionWrapper {
-	position: relative;
+	flex-direction: row;
+	padding-left: 80px;
 }
 
 .myImageWrapper {
+	position: static;
+	display: inline;
+}
+
+.myImageRelativeWrapper {
 	position: relative;
+}
+
+.myImg {
+	position: absolute;
 }
 
 .myImageCover {
@@ -88,13 +94,23 @@ header {
 	color: transparent;
 }
 
+.aboutMeWrapper {
+	position: static;
+	display: inline;
+}
+
+.aboutMeRelativeWrapper {
+	position: relative;
+}
+
 .aboutMeCover {
 	position: absolute;
-	top: 250px;
+	top: 255px;
 	z-index: 2;
-	height: 300px;
+	height: 320px;
 	width: 250px;
 	background-color: white;
+	/*border: 2px solid red;*/
 }
 .hideAboutMeCover {
 	background-color: transparent;
@@ -113,10 +129,19 @@ header {
 /* MEDIA QUERIES ==========================*/
 
 @media screen and (max-width: 725px) {
-	.aboutMeWrapper {
+	/*.aboutMeWrapper {
 		padding-right: 0;
 		align-items: flex-start;
+	}*/
+	.aboutHeader {
+		width: 300px;
 	}
+	.aboutBody{
+		padding-left: 0px;
+	} 
+	/*.aboutComponentWrapper {
+		display: block;
+	}*/
 }
 
 @media screen and (max-width: 300px) {
@@ -124,7 +149,7 @@ header {
 	main {
 		padding: 1em;
 	}
-	header {
+	.aboutHeader {
 		width: 200px;
 		padding: 0;
 	}
@@ -143,6 +168,10 @@ header {
 	}
 	.aboutMeWrapper p {
 		width: 200px;
+	}
+	.myImageCover {
+		width: 192;
+		height: 200;
 	}
 }
 
@@ -174,7 +203,7 @@ header {
 
 .myImageCoverAnimated {
 	animation: myImageCover;
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-delay: 3s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
@@ -192,15 +221,27 @@ header {
 
 .aboutMeCoverAnimated {
 	animation: aboutMeCover;
-	animation-duration: 3s;
-	animation-delay: 3s;
-	animation-timing-function: ease-in-out;
+	animation-duration: 7s;
+	animation-delay: 5s;
+	animation-timing-function: linear;
 	animation-fill-mode: forwards;
 }
 @keyframes aboutMeCover {
 	0% {
-		top: 250px;
-		height: 300px;
+		top: 255px;
+		height: 320px;
+	}
+	/*25%{
+		top: 312.5px;
+		height: 320px;
+	}*/
+	/*50%{
+		top: 375px;
+		height: 320px;
+	}*/
+	75%{
+		top: 437.5px;
+		height: 320px;
 	}
 	100% {
 		top: 500px;
@@ -211,7 +252,7 @@ header {
 .useTheTextAnimated {
 	animation: useTheText;
 	animation-duration: 3s;
-	animation-delay: 12s;
+	animation-delay: 14s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 }
@@ -234,7 +275,7 @@ header {
 @keyframes resumeBtn {
 	0% {color: black;}
 	50% {
-		color:green;
+		color:purple;
 	}
 	100% {
 		color: black;
@@ -242,7 +283,7 @@ header {
 }
 .resumeBtnAnimated:hover {
 	font-weight: 700;
-	color: green;
+	color: purple;
 }
 
 
