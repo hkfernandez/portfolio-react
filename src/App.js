@@ -12,6 +12,7 @@ function App() {
 	return (
 		<Router>
 			<Navbar />
+			<Route exact path="" component={About} />
 			<Route exact path="/" component={About} />
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/portfolio" component={Portfolio} />
