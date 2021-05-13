@@ -6,6 +6,7 @@ import burgerAppImg from './images/burger.png'
 import teamAppImg from './images/team.png'
 import portfolioAppImg from './images/portfolio.png'
 import featuredEdgeAppImg from './images/featuredEdge.png'
+import moviesAppImg from './images/movie.png'
 
 
 const projectsArr = [
@@ -22,6 +23,22 @@ const projectsArr = [
 			"Mongodb & Moongoose | ",
 			"SASS | ",
 			"Cloudinary"
+		]
+	},
+	{
+		imageSource: moviesAppImg,
+		atlText: "Movie Awards Web Application",
+		depolyedLink: "https://sheltered-ridge-37821.herokuapp.com/",
+		githubLink: "https://github.com/hkfernandez/movie_awards",
+		text: "At the Shopify movie awards you can nominate your favorite movie.",
+		tech: [
+			"React | ",
+			"Express | ",
+			"Node.js | ",
+			"Mongodb & Moongoose | ",
+			"SASS | ",
+			"React Bootstrap | ",
+			"OMDB API"
 		]
 	},
 	{
