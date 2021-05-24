@@ -41,20 +41,7 @@ const projectsArr = [
 			"OMDB API"
 		]
 	},
-	{
-		imageSource: stockAppImg,
-		atlText: "Investing Web Application",
-		depolyedLink: "https://secret-cliffs-66187.herokuapp.com/",
-		githubLink: "https://github.com/bardeeens/stock-simulator",
-		text: "Learn about the stock market by trading risk free and following real time share prices.",
-		tech: [
-			"Javascript | ",
-			"jQuery | ",
-			"Node.js | ",
-			"mySQL & Sequelize | ",
-			"3rd Party API - FMP "
-		]
-	},
+
 	{
 		imageSource: weatherAppImg,
 		atlText: "Weather Web Application",
@@ -127,5 +114,20 @@ const projectsArr = [
 		]
 	},
 ]
+
+const projectsArchive = [{
+	imageSource: stockAppImg,
+	atlText: "Investing Web Application",
+	depolyedLink: "https://secret-cliffs-66187.herokuapp.com/",
+	githubLink: "https://github.com/bardeeens/stock-simulator",
+	text: "Learn about the stock market by trading risk free and following real time share prices.",
+	tech: [
+		"Javascript | ",
+		"jQuery | ",
+		"Node.js | ",
+		"mySQL & Sequelize | ",
+		"3rd Party API - FMP "
+	]
+}];
 
 export default projectsArr;
