@@ -6,7 +6,7 @@ import burgerAppImg from './images/burger.png'
 import teamAppImg from './images/team.png'
 import portfolioAppImg from './images/portfolio.png'
 import featuredEdgeAppImg from './images/featuredEdge.png'
-import moviesAppImg from './images/movie.png'
+import moviesAppImg from './images/movies.png'
 
 
 const projectsArr = [
